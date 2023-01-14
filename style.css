@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "RaceSport";
+  src: url("Assets/Fonts/RaceSport.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OctinSports";
+  src: url("Assets/Fonts/octinSportsRg.otf") format("opentype");
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #0a009d;
+  --color-secundary: "";
+  --color-terciary: "";
+  --white: rgb(255, 255, 255);
+  --font-primary: RaceSport;
+  --font-secundary: OctinSports;
+}
+html {
+  font-size: 62.5%;
+  min-height: 100vh;
+
+  font-family: var(--font-secundary);
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(#10009d, #00e1ff);
+}
+
+.game-tittle {
+  color: var(--white);
+  font-family: var(--font-primary), serif;
+  font-weight: normal;
+  text-align: center;
+  font-size: 5em;
+}
+
+.game-info {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #faceae;
+  font-size: 3.5rem;
+  /* margin: auto; */
+}
+.game-info h2 {
+  margin: 0;
+}
+
+.cards-container {
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+  perspective: 800px;
+}
+
+.card {
+  position: relative;
+  height: 165px;
+  cursor: pointer;
+  width: 125px;
+}
+.card-face {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /*  border: green 3px solid; */
+  backface-visibility: hidden;
+  transition: transform 700ms ease-in-out;
+}
+.card.matched .card-front .card-figure {
+  animation: dance 1s linear infinite 500ms;
+}
+
+.card-front {
+  background-color: #00e1ff;
+  background-image: url("./Assets/Images/border-tick.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+}
+.card-back {
+  /*   background-color: #4158d0; */
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, white 0%, yellow 100%);
+
+  transform: rotateY(0);
+}
+
+/* .card-back.visible {
+  transform: rotateY(180deg);
+} */
+
+.card.visible .card-back {
+  transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+  transform: rotateY(0);
+}
+.card-figure {
+  position: relative;
+  transition: transform 100ms ease-in-out;
+  transform: scale(0.9);
+}
+
+.card-front:hover .card-figure {
+  transform: scale(1);
+}
+.back-img {
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+  transition: transform 100ms ease-in-out;
+  transform: translateY(-10px);
+}
+
+.card-back:hover .back-img {
+  transform: translateY(0px);
+}
+
+.overlay-text {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-primary), serif;
+  font-weight: normal;
+  color: var(--white);
+  font-size: 9rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(58, 143, 255, 0.8);
+}
+
+.overlay-text-small {
+  font-size: 4rem;
+}
+
+.overlay-text.visible {
+  display: flex;
+}
+
+@keyframes dance {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: repeat(2, auto);
+  }
+  .game-info {
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .game-info h2 {
+    margin: 0;
+  }
+}

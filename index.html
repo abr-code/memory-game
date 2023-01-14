@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <title>Mix Or Match clone</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="game-tittle game__tittle">Mix Or Match</h1>
+      <div class="overlay-text visible">Click to start</div>
+
+      <div id="game-victory-text" class="overlay-text">
+        Victory
+        <span class="overlay-text-small">Click to restart</span>
+      </div>
+
+      <div id="game-over-text" class="overlay-text">
+        Game over
+        <span class="overlay-text-small">Click to restart</span>
+      </div>
+    </header>
+    <section>
+      <div class="cards-container">
+        <div class="game-info">
+          <h2>Time: <span id="game-time">100</span></h2>
+          <h2>flips: <span id="game-flips">0</span></h2>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img
+              class="card-figure"
+              src="Assets/Images/american-football.png"
+            />
+          </div>
+
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img
+              class="card-figure"
+              src="Assets/Images/american-football.png"
+            />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-face card-front">
+            <img class="card-figure" src="Assets/Images/basketball.png" />
+          </div>
+          <div class="card-face card-back">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/basketball.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/flying-disc.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/flying-disc.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/mountain-biking.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/mountain-biking.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/rowing-boat.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/rowing-boat.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/snowboard.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/snowboard.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/soccer.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/soccer.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/tennis.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-front card-face">
+            <img class="card-figure" src="Assets/Images/tennis.png" />
+          </div>
+          <div class="card-back card-face">
+            <img class="back-img" src="Assets/Images/sports-back.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
