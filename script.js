@@ -17,11 +17,11 @@ cards.forEach((card) => {
 
 class AudioControler {
   constructor() {
-    this.bgMusic = new Audio("./assets/Audio/infected-vives.mp3");
-    this.flipSound = new Audio("./assets/Audio/flip.wav");
-    this.gameOverSound = new Audio("./assets/Audio/gameOver.wav");
-    this.victorySound = new Audio("./assets/Audio/victory.wav");
-    this.matchSound = new Audio("./assets/Audio/match.wav");
+    this.bgMusic = new Audio("./Assets/Audio/infected-vives.mp3");
+    this.flipSound = new Audio("./Assets/Audio/flip.wav");
+    this.gameOverSound = new Audio("./Assets/Audio/gameOver.wav");
+    this.victorySound = new Audio("./Assets/Audio/victory.wav");
+    this.matchSound = new Audio("./Assets/Audio/match.wav");
     this.bgMusic.volume = 0.5;
     this.bgMusic.loop = true;
   }
